@@ -1,0 +1,502 @@
+
+@font-face {
+    font-family: digital;
+    src: url(/fonts/digital-7.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body,.main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.header{
+    border: 1px solid black;
+    background-color: aqua;
+    height: 7%;
+    width: 100%; 
+    position: absolute;
+}
+
+.header h1{
+    font-size: 2vw;
+    text-align: center;
+    align-items: center;
+}
+
+.footer{
+    display: flex;
+    height: 93%;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    position: absolute;
+    top: 7%;
+}
+
+.simulate{
+    background-size: cover;
+    position: relative;
+    height: 96%;
+    width: 77%;
+    border: 1px solid black;
+    margin-left: 1%;
+    margin-top: 0%;
+    position: absolute;
+}
+
+#lab{
+    height: 100%;
+    width: 100%;
+    visibility: visible;
+}
+
+#message{
+    margin-left: 1%;
+    margin-top: 0%;
+    border: 1px solid black;
+    background-color: antiquewhite;
+    width: 20%;
+    height: 96%;
+    position: relative;
+    text-align: center;
+    left: 78%;
+}
+
+#work{
+    background-size: cover;
+    position: absolute;
+    height: 96%;
+    width: 77%;
+    border: 1px solid black;
+    margin-left: 1%;
+    margin-top: 0%;
+}
+
+#image{
+    height: 100%;
+    width: 100%;
+    visibility: visible;
+    position: relative;
+    visibility: hidden;
+}
+
+#button{
+    background-size: cover;
+    position: absolute;
+    height: 96%;
+    width: 77%;
+    border: 1px solid black;
+    margin-left: 1%;
+    margin-top: 0%;
+    visibility: visible;
+}
+
+#start{
+    position:absolute;
+    border-radius: 40%;
+    padding: 1%;
+    font-size: 1vw;
+    left: 90%;
+    top: 90%;
+    border: none;
+    background-color: rgb(113, 235, 237);
+    box-shadow: 2px 2px 0px 1px;
+    font-weight: 1000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#start:active{
+    scale: 0.9;
+    transition: all ease 0.2s;
+}
+
+#ins{
+    font-size: 3.5vw;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#text{
+    font-size: 2.4vw;
+    font-weight: 100;
+    color: blue;
+}
+
+#sound{
+    position: absolute;
+    height: 5%;
+    width: 10%;
+    top: 92%;
+    left: 8%;
+}
+
+#sound:active{
+    scale: 0.9;
+}
+
+#hindi{
+    position:absolute;
+    border-radius: 40%;
+    padding: 1%;
+    font-size: 1vw;
+    left: 45%;
+    top: 50%;
+    border: none;
+    background-color: rgb(226, 239, 33);
+    box-shadow: 2px 2px 0px 1px;
+    font-weight: 1000;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+#hindi:active{
+    scale: 0.9;
+}
+
+#eng{
+    position:absolute;
+    border-radius: 40%;
+    padding: 1%;
+    font-size: 1vw;
+    left: 55%;
+    top: 50%;
+    border: none;
+    background-color: rgb(239, 33, 33);
+    box-shadow: 2px 2px 0px 1px;
+    font-weight: 1000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#eng:active{
+    scale: 0.9;
+}
+
+#lselector{
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 2vw;
+    color: white;
+    left: 41%;
+    top: 40%;
+}
+
+#langselector{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+}
+
+#reading{
+    width: 5.7%;
+    height: 4.5%;
+    top: 64.5%;
+    left: 9.2%;
+    position: absolute;
+    text-align: center;
+}
+
+#change{
+    opacity: 0%;
+    color: red;
+    transition: all;
+    transition-duration: 1s;
+    font-family: digital;
+    font-weight: 100;
+    font-size: 2.4vw;
+}
+
+#conductometer{
+    width: 50%;
+    height: 60%;
+    top: 24%;
+    left: 5%;
+    position: absolute;
+    visibility: hidden;
+    transition: all;
+    transition-duration: 1s;
+}
+
+/*#power{
+    height: 5%;
+    width: 5%;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    visibility: hidden;
+}*/
+
+#power-button{
+    height: 15%;
+    width: 9%;
+    position: absolute;
+    left: 10%;
+    top: 48%;
+    visibility: hidden;
+}
+
+#on{
+    visibility: hidden;
+    height: 6%;
+    width: 2%;
+    position: absolute;
+    left: 15.7%;
+    top: 50.2%;
+}
+
+#off{
+    visibility: hidden;
+    height: 6%;
+    width: 2%;
+    position: absolute;
+    left: 15.7%;
+    top: 50.2%;
+}
+#nob1{
+    position: absolute;
+    visibility: hidden;
+    height: 4%;
+    width: 2%;
+    top: 66.2%;
+    left: 22.8%;
+    rotate: -90deg;
+    transition: all;
+    transition-duration: 1s;    
+}
+
+#nob2{
+    position: absolute;
+    visibility: hidden;
+    height: 4%;
+    width: 2%;
+    top: 66.4%;
+    left: 18%;
+    rotate: -95deg;
+    transition: all;
+    transition-duration: 1s;
+    
+}
+
+#nob3{
+    position: absolute;
+    visibility: hidden;
+    height: 4%;
+    width: 2%;
+    top: 65.4%;
+    left: 26.7%;
+    rotate: 90deg;
+    transition: all;
+    transition-duration: 1s;
+    
+}
+
+#clip{
+    width: 9%;
+    height: 5%;
+    top: 58.8%;
+    left: 40.8%;
+    position: absolute;
+    visibility: hidden;
+    transition: all;
+    transition-duration: 1s;
+    
+}
+
+#cell{
+    width: 6%;
+    height: 27%;
+    top: 37.5%;
+    left: 44.1%;
+    position: absolute;
+    visibility: hidden;
+    transition: all;
+    transition-duration: 1s;
+    
+}
+
+#rightarrow{
+    width: 5%;
+    height: 3%;
+    top: 64.5%;
+    left: 1%;
+    position: absolute;
+    visibility: hidden;
+}
+
+#cellconst{
+    width: 1.5%;
+    height: 2%;
+    position: absolute;
+    top: 65.3%;
+    left: 6.7%;
+}
+
+#ffb{
+    position: absolute;
+    width: 5%;
+    height: 12%;
+    top: 63.1%;
+    left: 65%;
+    transition: all;
+    transition-duration: 1s;
+    visibility: visible;
+}
+
+#bb{
+    position: absolute;
+    width: 5%;
+    height: 12.5%;
+    top: 62.5%;
+    left: 65%;
+    transition: all;
+    transition-duration: 1s;
+    visibility: visible;
+}
+
+#ffb1{
+    position: absolute;
+    width: 5%;
+    height: 12%;
+    top: 63.1%;
+    left: 73%;
+    transition: all;
+    transition-duration: 1s;
+    visibility: visible;
+}
+
+#bb1{
+    position: absolute;
+    width: 5%;
+    height: 12.5%;
+    top: 62.5%;
+    left: 73%;
+    transition: all;
+    transition-duration: 1s;
+    visibility: visible;
+}
+
+#ffb2{
+    position:absolute;
+    width: 5%;
+    height: 12%;
+    top: 63.1%;
+    left: 81%;
+    transition: all;
+    transition-duration: 1s;
+    visibility: visible;
+}
+
+#bb2{
+    position: absolute;
+    width: 5%;
+    height: 12.5%;
+    top: 62.5%;
+    left: 81%;
+    transition: all;
+    transition-duration: 1s;
+    visibility: visible;
+}
+
+#calculation{
+    background-size: cover;
+    position: absolute;
+    height: 96%;
+    width: 77%;
+    border: 1px solid black;
+    margin-left: 1%;
+    margin-top: 0%;
+}
+
+#tiles{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+}
+
+#top-view{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+    top: 0%;
+    left: 0%;
+}
+
+#hovt{
+    position: absolute;
+    font-size: 1vw;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    transition: all;
+    transition-duration: 0.5s;
+    /*left: 0%;
+    top: 0%;*/
+    visibility: hidden;
+}
+
+#hconductometer{
+    position: absolute;
+    height: 12%;
+    width: 16%;
+    /* background-color: red; */
+    top: 45%;
+    left: 18%;
+}
+
+#hcellstand{
+    position: absolute;
+    height: 33%;
+    width: 8%;
+    /*background-color: green;*/
+    top: 25%;
+    left: 40%;
+}
+
+#hcell{
+    position: absolute;
+    height: 18%;
+    width: 2%;
+    /*background-color: aqua;*/
+    top: 30%;
+    left: 44%;
+}
+
+#hcs{
+    position: absolute;
+    height: 13%;
+    width: 5%;
+    /*background-color: blue;*/
+    top: 44%;
+    left: 60%;
+}
+
+#hss{
+    position: absolute;
+    height: 13%;
+    width: 5%;
+    /*background-color: blue;*/
+    top: 44%;
+    left: 68%;
+}
+
+#has{
+    position: absolute;
+    height: 13%;
+    width: 5%;
+    /* background-color: blue; */
+    top: 44%;
+    left: 76%;
+}

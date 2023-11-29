@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body id="body">
+    <main class="main">
+        <div class="header" id="header">
+                <h1 id="headertext">Measurement of Electrical conductance to determine dissociation constant of 'Acetic' acid</h1>
+        </div>
+        <div class="footer">
+            <div class="simulate" id="simulator">   
+                <img id="lab" src="images/my-lab-with-switch.png" alt="Chemistry-Lab"> 
+                  
+            </div>
+            
+            <div id="work">
+                <img id="image" src="images/working-area.png" alt="">
+            </div>
+            <div id="calculation">
+                <img id="tiles" src="/images/tiles.png" alt="">
+                <img id="top-view" src="/images/topview-crop.png" alt="">
+            </div>
+            <div id="button">
+               
+                <img id="power-button" src="/images/power-button/power-button.png" alt="">
+                <img id="conductometer"  src="/images/conductometer1.png" alt="">
+                <div id="hcellstand"></div>
+                <div id="hconductometer"></div>
+                <img id="off" src="/images/power-button/power-off.png" onclick="poweron()" alt="">
+                <img id="on" src="/images/power-button/power-on.png" onclick="poweron()" alt="">
+                <img id="nob1" onclick="nobn1()" src="/images/conductometer nob.png" alt="">
+                <img id="nob2" onclick="nobn2()" src="/images/conductometer nob.png" alt="">
+                <img id="nob3" onclick="nobn3()" src="/images/conductometer nob.png" alt="">
+                <div id="reading">
+                    <h1 id="change">0.000</h1>
+                </div>
+                <img id="bb" onclick="beaker1()" src="images/beaker/behind-beaker.png" alt="">
+                <img id="bb1" onclick="beaker2()" src="images/beaker/behind-beaker.png" alt="">
+                <img id="bb2" onclick="beaker3()" src="images/beaker/behind-beaker.png" alt="">
+                <img id="cell" onclick="cellclick()" src="/images/conducting-cell1.png" alt="">
+                <div id="hcell"></div> 
+                <img id="ffb" onclick="beaker1()" src="/images/beaker/cleaning-solution.png" alt="">
+                <div id="hcs"></div>
+                <img id="ffb1" onclick="beaker2()" src="/images/beaker/standard-solution.png" alt="">
+                <div id="hss"></div>
+                <img id="ffb2" onclick="beaker3()" src="/images/beaker/acetic-acid.png" alt="">
+                <div id="has"></div>
+                <img id="clip" src="/images/stand clip.png" alt="">
+                <img id="rightarrow" src="/images/arrow-right.gif" alt="">
+
+                <nav id="cellconst" ></nav>
+                <h1 id="hovt"></h1>
+                <button id="start" onclick="ok()" >START</button>
+            </div>
+            
+           
+            <div id="message">
+                <h1 id="ins">Instructions</h1>
+                <h1 id="text">lets start the experiment</h1>
+                <img id="sound" onclick="speech1()" src="/images/sound.png" alt="">
+            </div>   
+        </div>
+        <div id="langselector">        
+            <h1 id="lselector">Please select your language</h1>
+            <button id="hindi" onclick="hindi1()">हिंदी</button>
+            <button id="eng" onclick="eng1()">ENGLISH</button>
+        </div>
+    </main>
+    <script src="/script/project.js"></script>
+    <script src="/script/starting.js"></script>
+</body>
+</html>
