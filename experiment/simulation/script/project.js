@@ -39,6 +39,7 @@ var message=["Click on start button to start the experiment",
 
 
 var s=document.querySelector("#start")
+var ins = document.querySelector("#ins")
 var mes=document.querySelector("#text")
 var i =document.querySelector("#image")
 var c=document.querySelector("#conductometer")
@@ -95,7 +96,11 @@ var messcounter=0
 var st=0
 var rc=0
 var mes1
-var lang
+var lang = "none"
+
+setTimeout(function(){
+    speech1()
+},1000)
 
 
 
@@ -170,7 +175,13 @@ function hindi1(){
     console.log(lang)
     lang="hindi"
     headertext.innerText="'एसिटिक' एसिड के पृथक्करण स्थिरांक को निर्धारित करने के लिए विद्युत चालकता का मापन"
-    langselector.style.visibility="hidden"
+    langselector.style.opacity="0%"
+    //s.innerText="आगे"
+    ins.innerText="निर्देश :-"
+
+    setTimeout(function(){
+        langselector.style.visibility="hidden"
+    },1000)
     update()
 }
 
@@ -178,31 +189,58 @@ function eng1(){
     console.log(lang)
     lang="eng"
     headertext.innerText="Measurement of Electrical conductance to determine dissociation constant of 'Acetic' acid"
-    langselector.style.visibility="hidden"
+    langselector.style.opacity="0%"
+    setTimeout(function(){
+        langselector.style.visibility="hidden"
+    },1000)
     update() 
 }
 
 
 
 function speech1(){
-    if(lang=="hindi"){
+    if(lang=="none"){
+        mes1="Please select your language"
+    }
+    else if(lang=="hindi"){
         mes1=hmessage[messcounter-1]
-        console.log(mes1)
-        console.log(lang)
     }
     else if(lang=="eng"){
         mes1=message[messcounter-1]
-        console.log(mes1)
-        console.log(lang)
     }
     setTimeout(function(){ 
         //mes1=hmessage[messcounter]
         const utterance = new SpeechSynthesisUtterance(mes1);
-        utterance.lang='hi-IN';
-        utterance.pitch=1;
+        if(lang=="hindi"){
+            utterance.lang='hi-IN';
+            utterance.pitch=1;
+            utterance.rate=1;
+            utterance.volume=1;
+            speechSynthesis.speak(utterance);
+        }
+        else if(lang=="none"){
+            utterance.lang='hi-IN';
+            utterance.pitch=1;
+            utterance.rate=1;
+            utterance.volume=1;
+            speechSynthesis.speak(utterance);
+            utterance.lang='eng-IN';
+            utterance.pitch=1;
+            utterance.rate=1;
+            utterance.volume=1;
+            speechSynthesis.speak(utterance);
+        }
+        else if(lang=="eng"){
+            utterance.lang='hi-IN';
+            utterance.pitch=1;
+            utterance.rate=1;
+            utterance.volume=1;
+            speechSynthesis.speak(utterance);
+        }
+        /*utterance.pitch=1;
         utterance.rate=1;
         utterance.volume=1;
-        speechSynthesis.speak(utterance);
+        speechSynthesis.speak(utterance);*/
     },500)
 }
 
@@ -248,6 +286,14 @@ function ok(){
         
     }
     else{
+        c.style.transitionDuration="1.0s"
+        cell.style.transitionDuration="1.0s"
+        b1f.style.transitionDuration="1.0s"
+        b2f.style.transitionDuration="1.0s"
+        b3f.style.transitionDuration="1.0s"
+        b1b.style.transitionDuration="1.0s"
+        b2b.style.transitionDuration="1.0s"
+        b3b.style.transitionDuration="1.0s"
     /*mes.innerText="go"*/
     i.style.visibility="visible"
     c.style.visibility="visible"
