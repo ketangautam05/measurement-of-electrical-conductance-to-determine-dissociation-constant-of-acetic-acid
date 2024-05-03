@@ -1,39 +1,35 @@
 
-var hmessage=["प्रयोग शुरू करने के लिए स्टार्ट बटन पर क्लिक करें",
+var hmessage=["उपकरणों पर माउस ले जा कर उनसे स्वयं को परिचित कराएं.....फिर प्रयोग शुरू करने के लिए स्टार्ट बटन पर क्लिक करें",
 "मुख्य स्विच चालू करें",
-"कंडक्टोमीटर पर पावर बटन पर क्लिक करें",
-"फ़ंक्शन नॉब घुमाएं और सेल-कॉन्स्ट मोड पर सेट करें",
-"सेल स्थिरांक सेट करने के लिए तापमान  घुंडी घुमाएँ",
-"ओह, आपने बहुत ज़्यादा घुमाया, इसे 0.960 पर सेट करें",
-"फ़ंक्शन नॉब को घुमाएं और चेक मोड पर वापस सेट करें",
-"क्लीनिंग सॉलूशन को सेल स्टैंड पर रखें और उसमें संवाहक सेल को डुबोएं, फिर संवाहक सेल को वापस खींचें और सफाई-समाधान को उसकी मूल स्थिति में वापस रखें",
-"अब मानक-समाधान को सेल स्टैंड पर रखें और उसमें चालक सेल को डुबोएं",
-"फ़ंक्शन नॉब को कैलिबर मोड में घुमाएँ",
-"मशीन को कैलिब्रेट करने के लिए रेंज नॉब घुमाएँ",
-"ओह, आपने बहुत ज़्यादा घुमाया, इसे 1.000 पर सेट करें",
-"बहुत अच्छा! इस बीकर को हटाओ",
-"अब इसकी चालकता ज्ञात करने के लिए 'एसिटिक एसिड' बीकर रखें",
-"सटीक मान प्राप्त करने के लिए संचालन-सेल को 2 से 3 बार डुबोएं",
-"बहुत बढ़िया! कंडक्टोमीटर-डिस्प्ले में जो मान दिखाया गया है उसे नोट कर लें और बीकर हटा दें",
-"अब गणना भाग पर जाने के लिए NEXT बटन पर क्लिक करें"]
+"कंडक्टरोमीटर पर पावर बटन दबाएं",
+"फ़ंक्शन नॉब घुमाएँ और सेल-कॉन्स्ट मोड पर सेट करें",
+"सेल स्थिरांक सेट करने के लिए सेल-कॉन्स्ट नॉब घुमाएँ",
+"फ़ंक्शन नॉब घुमाएँ और MHOS मोड पर वापस सेट करें",
+"अब आसुत जल द्वारा चालकता सेल को साफ करें",
+"अब चालकता सेल को अलग-अलग सांद्रता वाले प्रत्येक सोडियम क्लोराइड घोल में एक-एक करके डुबोएं",
+"सटीक माप के लिए संतुलन स्थापित करने के लिए चालकता सेल को कुछ समय के लिए घोल में डुबोकर छोड़ दें",
+"कंडक्टरोमीटर की स्क्रीन पर दिखाई गई प्रत्येक रीडिंग को नोट करें",
+"प्रत्येक हाइड्रो क्लोरिक एसिड समाधान के लिए रीडिंग लिखें",
+"सटीक माप के लिए संतुलन स्थापित करने के लिए चालकता सेल को कुछ समय के लिए घोल में डुबोकर छोड़ दें",
+"कंडक्टरोमीटर की स्क्रीन पर दिखाई गई प्रत्येक रीडिंग को नोट करें",
+"एसिटिक एसिड समाधान के लिए रीडिंग लिखें",
+"सभी रेटिंग, मान और गणना देखने के लिए अगला बटन दबाएँ"]
 
-var message=["Click on start button to start the experiment",
+var message=["Make yourself familiar with the insturments by hovering over them, then click on start button to start the experiment",
 "Turn on the main switch",
-"Click on power button on conductometer",
+"Press the power button on conductometer",
 "Rotate FUNCTION knob and set on CELL-CONST mode",
-"Rotate TEMPERATURE knob to set cell constant",
-"This is too much.... rotate to 0.960",
-"Rotate FUNCTION knob and set back on CHECK mode",
-"Place cleaning-solution on cell stand and dip conducting cell in it then pull back conducting cell and put back cleaning-solution to its original state",
-"Now place STANDARD-SOLUTION on cell stand and dip conducting cell in it",
-"Rotate FUNCTION knob to CALIBR mode",
-"Rotate RANGE knob to calibrate Machine",
-"Ohh you rotated too much.... set it to 1.000",
-"WELL DONE !       Remove this beaker",
-"Now put 'Acetic acid' beaker to find its conductivity",
-"Dip conducting-cell 2-3 times to get accurate value",
-"VERY NICE !..      Note down the value which is shown in the conductometer-display and remove beaker",
-"Now click on NEXT button to go to calculation part"]
+"Rotate CELL-CONST knob to set cell constant",
+"Rotate FUNCTION knob and set back on MHOS mode",
+"Now clean the conductivity cell by Distilled water",
+"Now dip conductivity cell in each sodium chloride solution of different concentration one by one",
+"leave conductivity cell dipped in solution for some time to establish equilibirium for accurate measurement",
+"Note down every reading shown on conductometer's screen",
+"Write down readings for each Hydro Chloric acid solution",
+"leave conductivity cell dipped in solution for some time to establish equilibirium for accurate measurement",
+"Note down every reading shown on conductometer's screen",
+"Write down readings for Acetic acid solution",
+"press next button to see all radings, values and calculations"]
 
 
 
@@ -77,6 +73,8 @@ var hindibtn = document.querySelector("#hindi")
 var engbtn = document.querySelector("#eng")
 var headertext = document.querySelector("#headertext")
 var langselector = document.querySelector("#langselector")
+var ph = document.querySelector("#ph")
+var hlight = document.querySelector("#hlight")
 
 
 /*var t=h*/
@@ -92,15 +90,16 @@ var cc="notclicked"
 var constset="no"
 var reader="0.000"
 var mode="none"
-var messcounter=0
+var messcounter=0 
 var st=0
 var rc=0
 var mes1
 var lang = "none"
+var phc=0
 
-setTimeout(function(){
+/*setTimeout(function(){
     speech1()
-},1000)
+},1000)*/
 
 
 
@@ -181,6 +180,8 @@ function hindi1(){
 
     setTimeout(function(){
         langselector.style.visibility="hidden"
+        s.style.animation="vibrate 1s"
+        s.style.animationIterationCount="infinite"
     },1000)
     update()
 }
@@ -192,6 +193,8 @@ function eng1(){
     langselector.style.opacity="0%"
     setTimeout(function(){
         langselector.style.visibility="hidden"
+        s.style.animation="vibrate 1s"
+        s.style.animationIterationCount="infinite"
     },1000)
     update() 
 }
@@ -199,8 +202,9 @@ function eng1(){
 
 
 function speech1(){
+    speechSynthesis.cancel();
     if(lang=="none"){
-        mes1="Please select your language"
+        /*mes1="Please select your language"*/
     }
     else if(lang=="hindi"){
         mes1=hmessage[messcounter-1]
@@ -210,37 +214,18 @@ function speech1(){
     }
     setTimeout(function(){ 
         //mes1=hmessage[messcounter]
+        
         const utterance = new SpeechSynthesisUtterance(mes1);
         if(lang=="hindi"){
             utterance.lang='hi-IN';
-            utterance.pitch=1;
-            utterance.rate=1;
-            utterance.volume=1;
-            speechSynthesis.speak(utterance);
-        }
-        else if(lang=="none"){
-            utterance.lang='hi-IN';
-            utterance.pitch=1;
-            utterance.rate=1;
-            utterance.volume=1;
-            speechSynthesis.speak(utterance);
-            utterance.lang='eng-IN';
-            utterance.pitch=1;
-            utterance.rate=1;
-            utterance.volume=1;
-            speechSynthesis.speak(utterance);
         }
         else if(lang=="eng"){
-            utterance.lang='hi-IN';
-            utterance.pitch=1;
-            utterance.rate=1;
-            utterance.volume=1;
-            speechSynthesis.speak(utterance);
+            utterance.lang='en-IN';
         }
-        /*utterance.pitch=1;
+        utterance.pitch=1;
         utterance.rate=1;
         utterance.volume=1;
-        speechSynthesis.speak(utterance);*/
+        speechSynthesis.speak(utterance);
     },500)
 }
 
@@ -276,15 +261,53 @@ function ok(){
         b1b.style.visibility="hidden"
         b2b.style.visibility="hidden"
         b3b.style.visibility="hidden"
+        a5.style.visibility="hidden"
+        a5b.style.visibility="hidden"
+        a25.style.visibility="hidden"
+        a25b.style.visibility="hidden"
+        a125.style.visibility="hidden"
+        a125b.style.visibility="hidden"
+        off.style.visibility="hidden"
+
         change.style.visibility="hidden"
         powerbutton.style.visibility="hidden"
         on.style.visibility="hidden"
-        },100)
+
+        tbl1.style.visibility="visible"
+        tbl2.style.visibility="visible"
+        tbl3.style.visibility="visible"
+        tblh1.style.visibility="visible"
+        tblh2.style.visibility="visible"
+        tblh3.style.visibility="visible"
+        simulation="sabkhatam"
         setTimeout(function(){
+            imageshow="none"
+        },2000)
+
+        
+        },100)
+       /* setTimeout(function(){
             s.style.visibility="hidden"
-        },1000)
+        },1000)*/
         
     }
+
+    else if(imageshow=="none"){
+        dataimage.style.visibility="visible"
+        imageheading.style.visibility="visible"
+        formula.style.visibility="visible"
+        tbl4.style.visibility="visible"
+        tblh4.style.visibility="visible"
+
+        tbl1.style.visibility="hidden"
+        tbl2.style.visibility="hidden"
+        tbl3.style.visibility="hidden"
+        tblh1.style.visibility="hidden"
+        tblh2.style.visibility="hidden"
+        tblh3.style.visibility="hidden"
+
+    }
+
     else{
         c.style.transitionDuration="1.0s"
         cell.style.transitionDuration="1.0s"
@@ -294,37 +317,55 @@ function ok(){
         b1b.style.transitionDuration="1.0s"
         b2b.style.transitionDuration="1.0s"
         b3b.style.transitionDuration="1.0s"
-    /*mes.innerText="go"*/
-    i.style.visibility="visible"
-    c.style.visibility="visible"
-    cell.style.visibility="visible"
-    clip.style.visibility="visible"
-    b1f.style.visibility="visible"
-    b2f.style.visibility="visible"
-    b3f.style.visibility="visible"
-    b1b.style.visibility="visible"
-    b2b.style.visibility="visible"
-    b3b.style.visibility="visible"
-    powerbutton.style.visibility="visible"
-    hovt.style.visibility="hidden"
-    hconductometer.style.visibility="hidden"
-    hcellstand.style.visibility="hidden"
-    hcell.style.visibility="hidden"
-    hcs.style.visibility="hidden"
-    hss.style.visibility="hidden"
-    has.style.visibility="hidden"
-    /*power1.style.visibility="visible"*/
-    setTimeout(function(){
-        nob1.style.visibility="visible" 
-        nob2.style.visibility="visible" 
-        nob3.style.visibility="visible" 
-        /*on.style.visibility="visible"*/
-        off.style.visibility="visible" 
-        s.style.visibility="hidden"
+        i.style.visibility="visible"
+        c.style.visibility="visible"
+        cell.style.visibility="visible"
+        clip.style.visibility="visible"
+        b1f.style.visibility="visible"
+        b2f.style.visibility="visible"
+        b3f.style.visibility="visible"
+        b1b.style.visibility="visible"
+        b2b.style.visibility="visible"
+        b3b.style.visibility="visible"
+        powerbutton.style.visibility="visible"
+        hovt.style.visibility="hidden"
+        hconductometer.style.visibility="hidden"
+        hcellstand.style.visibility="hidden"
+        hcell.style.visibility="hidden"
+        hcs.style.visibility="hidden"
+        hss.style.visibility="hidden"
+        has.style.visibility="hidden"
+        s.style.animation="none"
+        s.style.animationIterationCount="0"
+        ph.style.visibility="visible"
+        ph.style.transform="translate(-230%,-500%)"
+        /*power1.style.visibility="visible"*/
+        setTimeout(function(){
+            nob1.style.visibility="visible" 
+            nob2.style.visibility="visible" 
+            nob3.style.visibility="visible" 
+            /*on.style.visibility="visible"*/
+            off.style.visibility="visible" 
+            s.style.visibility="hidden"
+            na5.style.visibility="visible"
+            na5b.style.visibility="visible"
+            na25.style.visibility="visible"
+            na25b.style.visibility="visible"
+            na125.style.visibility="visible"
+            na125b.style.visibility="visible"
 
-    },1000)
-    resize()
-    update()
+        },1000)
+        resize()
+        update()
+
+        //temp code for hiding the beakers 
+
+        //b1f.style.visibility="hidden"
+        b2f.style.visibility="hidden"
+        b3f.style.visibility="hidden"
+        //b1b.style.visibility="hidden"
+        b2b.style.visibility="hidden"
+        b3b.style.visibility="hidden"
     
     }
     
@@ -336,6 +377,7 @@ function poweron(){
     rightarrow.style.visibility="visible"  
     on.style.visibility="visible"
     off.style.visibility="hidden"
+    ph.style.visibility="hidden"
     messcounter=2
     update()
     st+=1
@@ -345,6 +387,8 @@ function poweron(){
     rightarrow.style.visibility="hidden"  
     on.style.visibility="hidden"
     off.style.visibility="visible"
+    ph.style.visibility="visible"
+    ph.style.transform="translate(-230%,-500%)"
     st=0
     messcounter=1
     update()
@@ -353,37 +397,20 @@ function poweron(){
 }
 
 
-constbutton.addEventListener("click",function cellconst(){
+function cellconst(){
     if(power=="on"){
     rightarrow.style.visibility="hidden"
     cc="clicked"
     change.style.opacity="100%"
+    ph.style.visibility="visible"
+    ph.style.transform="translate(-410%,-700%)"
     update()
     power="khatam"
     st=10
     }
-})
-
-function nobn3(){
-    if(cc=="clicked"){
-        nob3.style.transform="translate(25%,0%) rotate(70deg)"
-        cc="const"
-        update()
-    }
-    else if(cc=="calibration"){
-        nob3.style.transform="translate(0%,0%) rotate(0deg)"
-        change.innerText="0.000"
-        placed="no"
-        cc="unknown"
-        update()
-        
-    }
-    else if(cc=="check"){
-        nob3.style.transform="translate(10%,0%) rotate(20deg)"
-        cc="calibrate"
-        update()
-    }
 }
+
+////////////////////////////////////////////////////////////////////////// nob1 function   ////////////////////////////////////////////////////////////////////////////
 
 function nobn1(){
     console.log(cc)
@@ -391,17 +418,27 @@ function nobn1(){
         if(constset=="no"){
             nob1.style.transform="translate(15%,0%) rotate(40deg)"
             change.innerText="0.135"
+            ph.style.visibility="hidden"
             constset="half"
+            cell.style.transform="scale(1)"
+            hlight.style.visibility="hidden"
         }
         else if(constset=="half"){
             nob1.style.transform="translate(29%,0%) rotate(90deg)"
             change.innerText="1.246"
-            constset="over"
-            update()
+            constset="overend"
+            if(m==0){
+                ptext.innerText="WARNING"
+                hint.innerText="Ohh you rotated too much make it to 1.160"
+                box.style.visibility="visible"
+            }
+           
         }
         else if(constset=="over"){
             nob1.style.transform="translate(20%,0%) rotate(60deg)"
-            change.innerText="0.960"
+            change.innerText="1.160"
+            ph.style.visibility="visible"
+            ph.style.transform="translate(-410%,-700%)"
             constset="yes"
             cc="calibration"
             update()
@@ -409,12 +446,15 @@ function nobn1(){
     }
 }
 
+///////////////////////////////////////////////////////////////////// nob2 function   //////////////////////////////////////////////////////////////////////////////
+
 function nobn2(){
     if(cc=="calibrate"){
     /*clickcount=0*/
     nob2.style.transform="translate(10%,0%) rotate(20deg)"
     change.innerText="0.335"
     cc="step1"
+    ph.style.visibility="hidden"
     }
     else if(cc=="step1"){
         /*clickcount=0*/
@@ -436,6 +476,8 @@ function nobn2(){
         cc="done"
         clickcount=1
         statuses="checked"
+        ph.style.visibility="visible"
+        ph.style.transform="translate(-750%,-400%)"
         update()
     }
     /*else{
@@ -443,8 +485,36 @@ function nobn2(){
     }*/
 }
 
+///////////////////////////////////////////////////////////////////// nob3 function   //////////////////////////////////////////////////////////////////////////////
+
+function nobn3(){
+    if(cc=="clicked"){
+        nob3.style.transform="translate(25%,0%) rotate(70deg)"
+        cc="const"
+        ph.style.transform="translate(-350%,-700%)"
+        cell.style.transform="scale(3)"
+        hlight.style.visibility="visible"
+        update()
+    }
+    else if(cc=="calibration"){
+        nob3.style.transform="translate(0%,0%) rotate(0deg)"
+        change.innerText="0.000"
+        placed="no"
+        cc="unknown"
+        ph.style.transform="translate(-1070%,-650%)"
+        update()
+        
+    }
+    else if(cc=="check"){
+        nob3.style.transform="translate(10%,0%) rotate(20deg)"
+        ph.style.transform="translate(-260%,-700%)"
+        cc="calibrate"
+        update()
+    }
+}
 
 
+//////////////////////////////////////////////////////////// conductivity cell function   /////////////////////////////////////////////////////////////////////////
 
 function cellclick(){
     if(clickcount==0){
@@ -455,32 +525,108 @@ function cellclick(){
             /*console.log(statuses)*/
             clickcount+=1
         }
-        else if(beaker=="standard" && cc=="unknown"){
+        else if(beaker=="standard"/* && cc=="unknown"*/){
             /*statuses="checked"*/
-            cc="check"
+            //cc="check"
             clickcount=10
+            ph.style.transform="translate(-750%,-400%)"
             if(clickcount==10){
-                update()
+                if(type=="na5"){
+                    change.innerText="05.93"
+                    setTimeout(function(){
+                        change.innerText="05.95"
+                        clickcount=1
+                    },2000)
+                    messcounter=8
+                    update()
+                    
+                }
+                else if(type=="na25"){
+                    change.innerText="02.76"
+                    setTimeout(function(){
+                        change.innerText="02.77"
+                        clickcount=1
+                    },2000)
+                }
+                else if(type=="na125"){
+                    change.innerText="01.45"
+                    setTimeout(function(){
+                        change.innerText="01.47"
+                        clickcount=1
+                    },2000)
+                }
+                else if(type=="h5"){
+                    change.innerText="013.4"
+                    setTimeout(function(){
+                        change.innerText="013.7"
+                        clickcount=1
+                    },2000)
+                    messcounter=11
+                    update()
+                    
+                }
+                else if(type=="h25"){
+                    change.innerText="07.64"
+                    setTimeout(function(){
+                        change.innerText="07.65"
+                        clickcount=1
+                    },2000)
+                }
+                else if(type=="h125"){
+                    change.innerText="04.13"
+                    setTimeout(function(){
+                        change.innerText="04.15"
+                        clickcount=1
+                    },2000)
+                }
+                
+
             }
+           
            
             /*console.log(statuses)*/
         }
         else if(beaker=="unknown"){
             statuses="value-found"
             /*console.log(statuses)*/
-            clickcount+=1
-            if(cc=="done"){
+            //clickcount+=1
+            /*if(cc=="done"){
             change.innerText="7.896"
-            rc+=1
-            if(rc==3){
+            rc+=1*/
+
+            if(type=="a5"){
+                change.innerText="02.24"
+                setTimeout(function(){
+                    change.innerText="02.26"
+                    clickcount=1
+                },2000)
+                messcounter=11
                 update()
+                
             }
+            else if(type=="a25"){
+                change.innerText="01.45"
+                setTimeout(function(){
+                    change.innerText="01.46"
+                    clickcount=1
+                },2000)
             }
+            else if(type=="a125"){
+                change.innerText="00.91"
+                setTimeout(function(){
+                    change.innerText="00.92"
+                    clickcount=1
+                    checking="khatam"
+                },2000)
+            }
+                ph.style.transform="translate(-670%,-800%) rotate(-90deg)"
+            
         }
-        else if(cc=="done" && beaker=="standard"){
+        /*else if(cc=="done" && beaker=="standard"){
             change.innerText="1.000"
+            ph.style.transform="translate(-750%,-400%)"
             clickcount+=1
-        }
+        }*/
 
     }
     else if(clickcount==1){
@@ -488,24 +634,100 @@ function cellclick(){
     }
 }
 
+///////////////////////////////////////////////////////////////////////////click reverse function////////////////////////////////////////////////////////
+
 function cellclickreverse(){
     cell.style.transform="translate(0%,0%)"
     clickcount-=1
-    if(cc=="done" && beaker=="unknown"){
+    if(/*cc=="done" && */beaker=="unknown"){
         change.innerText="0.000"
+        if(type=="a5"){
+            testing="read8"
+            checking="50"
+            chance="khatam"
+            messcounter=12
+            update()
+        }
+        else if(type=="a25"){
+            testing="read9"
+            checking="50"
+        }
+        else if(type=="a125"){
+            testing="read10"
+            checking="50"
+        }
+
     }
-    else if(cc=="done" && beaker=="standard"){
+    else if(/*cc=="done" && */beaker=="standard"){
         change.innerText="0.000"
+        ph.style.transform="translate(-670%,-800%) rotate(-90deg)"
+        if(type=="na5"){
+            testing="read1"
+            messcounter=9
+            update()
+        }
+        else if(type=="na25"){
+            testing="read2"
+            checking="50"
+        }
+        else if(type=="na125"){
+            testing="read3"
+            checking="50"
+        }
+        else if(type=="h5"){
+            testing="read4"
+            checking="50"
+            chance="khatam"
+            messcounter=12
+            update()
+        }
+        else if(type=="h25"){
+            testing="read5"
+            checking="50"
+        }
+        else if(type=="h125"){
+            testing="read6"
+            checking="50"
+        }
     }
+    else if(statuses=="cleaned"){
+        ph.style.transform="translate(-670%,-800%) rotate(-90deg)"
+        if(testing=="read3"){
+            chance="second"
+        }
+        else if(testing=="read7"){
+            chance="third"
+        }
+        else if(placed=="yes"){
+            m=1
+        }
+    }
+    /*else if(statuses=="checked" && cc=="done"){
+        ph.style.transform="translate(-670%,-800%) rotate(-90deg)"
+    }*/
 }
 
+///////////////////////////////////////////////////////////////////   DISTILLED WATER BEAKER   ///////////////////////////////////////////////////////////////////////
+
 function beaker1(){
-    if(placed=="no"){
+    console.log(placed)
+    if(placed=="no" || m==8 || m==13){
         b1f.style.transform="translate(-375%,15%)"
         b1b.style.transform="translate(-375%,15%)"
         beaker="cleaning-sol"
         clickcount=0
         placed="yes"
+        //ph.style.visibility="hidden"
+        ph.style.transform="translate(-750%,-400%)"
+        console.log(testing)
+
+        if(m==8){
+            m=9
+        }
+        else if(m==13){
+            m=15
+
+        }
     }
 
     else if(statuses=="cleaned" && clickcount==0){
@@ -513,18 +735,33 @@ function beaker1(){
         b1b.style.transform="translate(0%,0%)"
         clickcount=10
         cleaning="complete"
-        update()
+        ph.style.transform="translate(-1200%,-650%) rotate(0deg)"
+        console.log(m)
+        pop1()
+        console.log(testing)
+        console.log()
+            if(m==9){
+                messcounter=10
+                update()
+                m=90
+            }
+            if(m==15){
+                messcounter=13
+                update()
+                m=75
+            }
     }
 
 }
 
-function beaker2(){
+/*function beaker2(){
     if(cleaning=="complete"){
         b2f.style.transform="translate(-540%,15%)"
         b2b.style.transform="translate(-540%,15%)"
         beaker="standard"
         clickcount=0
         cleaning="none"
+        ph.style.transform="translate(-750%,-400%) rotate(0deg)"
         
     }
 
@@ -533,6 +770,7 @@ function beaker2(){
         b2b.style.transform="translate(0%,0%)"
         clickcount=10
         checking="complete"
+        ph.style.transform="translate(-1340%,-650%)"
         update()
     }
 }
@@ -544,6 +782,7 @@ function beaker3(){
         beaker="unknown"
         clickcount=0
         checking="none"
+        ph.style.transform="translate(-750%,-400%) rotate(0deg)"
         update()
 
     }
@@ -552,14 +791,17 @@ function beaker3(){
         b3b.style.transform="translate(0%,0%)"
         clickcount=10
         simulation="complete"
+        s.style.animation="vibrate 1s"
+        s.style.animationIterationCount="infinite"
         s.style.visibility="visible"
         s.innerText="Next"
+        ph.style.visibility="hidden"
         update()
 
         setTimeout(function(){
             cell.style.transitionDuration="0s"
             /*s.style.transitionDuration="0s"*/
-            i.style.transitionDuration="0s"
+         /*   i.style.transitionDuration="0s"
             c.style.transitionDuration="0s"
             cell.style.transitionDuration="0s"
             clip.style.transitionDuration="0s"
@@ -576,3 +818,5 @@ function beaker3(){
         })
     }
 }
+)*/
+

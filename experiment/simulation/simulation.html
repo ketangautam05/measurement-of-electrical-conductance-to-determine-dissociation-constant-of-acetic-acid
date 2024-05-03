@@ -18,16 +18,16 @@
             </div>
             
             <div id="work">
-                <img id="image" src="images/working-area.png" alt="">
+                <img id="image" src="images/working-area-empty1.png" alt="">
             </div>
             <div id="calculation">
                 <img id="tiles" src="images/tiles.png" alt="">
-                <img id="top-view" src="images/topview-crop.png" alt="">
+                <img id="top-view" src="images/white.jpg" alt="">
             </div>
             <div id="button">
                
                 <img id="power-button" src="images/power-button/power-button.png" alt="">
-                <img id="conductometer"  src="images/conductometer1.png" alt="">
+                <img id="conductometer"  src="images/conductometer1new.png" alt="">
                 <div id="hcellstand"></div>
                 <div id="hconductometer"></div>
                 <img id="off" src="images/power-button/power-off.png" onclick="poweron()" alt="">
@@ -41,18 +41,200 @@
                 <img id="bb" onclick="beaker1()" src="images/beaker/behind-beaker.png" alt="">
                 <img id="bb1" onclick="beaker2()" src="images/beaker/behind-beaker.png" alt="">
                 <img id="bb2" onclick="beaker3()" src="images/beaker/behind-beaker.png" alt="">
+                <!--nacl beaker back images-->
+                <img id="na5b" onclick="nacl5()" src="images/beaker/behind-beaker.png" alt="">
+                <img id="na25b" onclick="nacl25()" src="images/beaker/behind-beaker.png" alt="">
+                <img id="na125b" onclick="nacl125()" src="images/beaker/behind-beaker.png" alt="">
+                <!--hcl beaker back images-->
+                <img id="h5b" onclick="hcl5()" src="images/beaker/behind-beaker.png" alt="">
+                <img id="h25b" onclick="hcl25()" src="images/beaker/behind-beaker.png" alt="">
+                <img id="h125b" onclick="hcl125()" src="images/beaker/behind-beaker.png" alt="">
+                <!--acetic acid beaker back images-->
+                <img id="a5b" onclick="acetic5()" src="images/beaker/behind-beaker.png" alt="">
+                <img id="a25b" onclick="acetic25()" src="images/beaker/behind-beaker.png" alt="">
+                <img id="a125b" onclick="acetic125()" src="images/beaker/behind-beaker.png" alt="">
+                
                 <img id="cell" onclick="cellclick()" src="images/conducting-cell1.png" alt="">
                 <div id="hcell"></div> 
-                <img id="ffb" onclick="beaker1()" src="images/beaker/cleaning-solution.png" alt="">
+                <img id="ffb" onclick="beaker1()" src="images/beaker/distilled water.png" alt="">
                 <div id="hcs"></div>
                 <img id="ffb1" onclick="beaker2()" src="images/beaker/standard-solution.png" alt="">
                 <div id="hss"></div>
                 <img id="ffb2" onclick="beaker3()" src="images/beaker/acetic-acid.png" alt="">
                 <div id="has"></div>
+                <!--nacl beaker front images-->
+                <img id="na5" onclick="nacl5()" src="images/beaker/nacl0.05.png" alt="">
+                <img id="na25" onclick="nacl25()" src="images/beaker/nacl0.025.png" alt="">
+                <img id="na125" onclick="nacl125()" src="images/beaker/nacl0.0125.png" alt="">
+                <!--acetic acid beaker front images-->
+                <img id="a5" onclick="acetic5()" src="images/beaker/acetic 0.05.png" alt="">
+                <img id="a25" onclick="acetic25()" src="images/beaker/acetic 0.025.png" alt="">
+                <img id="a125" onclick="acetic125()" src="images/beaker/acetic 0.0125.png" alt="">
+                <!--hcl beaker front images-->
+                <img id="h5" onclick="hcl5()" src="images/beaker/hcl0.05.png" alt="">
+                <img id="h25" onclick="hcl25()" src="images/beaker/hcl0.025.png" alt="">
+                <img id="h125" onclick="hcl125()" src="images/beaker/hcl0.0125.png" alt="">
+
                 <img id="clip" src="images/stand clip.png" alt="">
                 <img id="rightarrow" src="images/arrow-right.gif" alt="">
+                <img id="ph" src="images/phand.png" alt="">
+                <div id="hlight"></div>
+                
+                <div id="popup">
+                    <div id="popheader">
+                        <h1 id="ptext">Remember</h1>
+                    </div>
+                    <h1 id="hinttext">ok</h1>
+                    <img id="greentick" onclick="green1()" src="/images/pngwing.com.png" alt="">
+                </div>
 
-                <nav id="cellconst" ></nav>
+
+                <!---------------------------------------------------/////////////    Table 1      /////////////// ---------------------------------------------------->
+                <h4 id="tableheading1" class="tblhd">Determination of equivalent conductance of NaCl at different concentrations</h4>
+                <table id="table1" class="tbl1">
+                    <thead>
+                      <tr>
+                        <th>Concentration of <br>NaCl solution (N)</th>
+                        <th>√C(M<sup>0.5</sup>)</th>
+                        <th>Conductance,<br> L(mmho)</th>
+                        <th>Equivalent conductance, Λ (mmho cm<sup>2</sup> <br>equivalent<sup>-1</sup>) = (1000 L X)/C</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>0.05</td>
+                        <td>0.223607</td>
+                        <td>5.95</td>
+                        <td>138040</td>
+                      </tr>
+                      <tr>
+                        <td>0.025</td>
+                        <td>0.158114</td>
+                        <td>2.77</td>
+                        <td>128528</td>
+                      </tr>
+                      <tr>
+                        <td>0.0125</td>
+                        <td>0.111803</td>
+                        <td>1.47</td>
+                        <td>136416</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                   <!---------------------------------------------  tabble 2  ------------------------------------------------->
+
+                  <h4 id="tableheading2" class="tblhd">Determination of equivalent conductance of HCL at different concentrations</h4>
+                  <table id="table2" class="tbl1">
+                    <thead>
+                      <tr>
+                        <th>Concentration of <br>HCL solution (N)</th>
+                        <th>√C(M<sup>0.5</sup>)</th>
+                        <th>Conductance,<br> L(mmho)</th>
+                        <th>Equivalent conductance, Λ (mmho cm<sup>2</sup> <br>equivalent<sup>-1</sup>) = (1000 L X)/C</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>0.05</td>
+                        <td>0.223607</td>
+                        <td>13.7</td>
+                        <td>317840</td>
+                      </tr>
+                      <tr>
+                        <td>0.025</td>
+                        <td>0.158114</td>
+                        <td>7.65</td>
+                        <td>354960</td>
+                      </tr>
+                      <tr>
+                        <td>0.0125</td>
+                        <td>0.111803</td>
+                        <td>4.15</td>
+                        <td>385120</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <!---------------------------------------------  tabble 3  ------------------------------------------------->
+
+                  <h4 id="tableheading3" class="tblhd">Determination of equivalent conductance of CH<sub>3</sub>COONa at different concentrations</h4>
+                  <table id="table3" class="tbl1">
+                    <thead>
+                      <tr>
+                        <th>Concentration of <br>CH<sub>3</sub>COONa solution (N)</th>
+                        <th>√C(M<sup>0.5</sup>)</th>
+                        <th>Conductance,<br> L(mmho)</th>
+                        <th>Equivalent conductance, Λ (mmho cm<sup>2</sup> <br>equivalent<sup>-1</sup>) = (1000 L X)/C</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>0.05</td>
+                        <td>0.223607</td>
+                        <td>2.26</td>
+                        <td>52432</td>
+                      </tr>
+                      <tr>
+                        <td>0.025</td>
+                        <td>0.158114</td>
+                        <td>1.46</td>
+                        <td>67744</td>
+                      </tr>
+                      <tr>
+                        <td>0.0125</td>
+                        <td>0.111803</td>
+                        <td>0.92</td>
+                        <td>85376</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                   <!------------------------------------------------------------  tabble 4  ------------------------------------------------------------------->
+                  <img id="dataimage" src="images/data.jpg" alt="">
+                  <h4 id="imageheading">Figure 1: Plot of equivalent conductance vs √C for NaCl, HCl and CH3COONa</h4>
+
+                  <h4 id="formula">The Y-axis intercept for NaCl, HCl and CH<sub>3</sub>COONa are 169960 mmho cm<sup>2</sup> eqv<sup>-1</sup>, 454680 <br>
+                    mmho cm<sup>2</sup> eqv<sup>-1</sup>, 135130 mmho cm<sup>2</sup> eqv<sup>-1</sup>, respectively.<br>
+                    The equivalent conductance of acetic acid at infinite dilution (Λ<sub>0</sub>) is given as,<br>
+                     Λ<sub>0</sub> = Λ<sub>0</sub><sup>CH3COONa</sup> + Λ<sub>0</sub><sup>HCl</sup> - Λ<sub>0</sub><sup>NaCl</sup><br>
+                          = (135130+454680-169960) mmho cm<sup>2</sup> eqv<sup>-1</sup><br>
+                          = 419850 mmho cm<sup>2</sup> eqv<sup>-1</sup> 
+                    </h4>
+
+                  <h4 id="tableheading4" class="tblhd">Determination of exact concentration of acetic acid solutions</h4>
+                  <table id="table4" class="tbl1">
+                    <thead>
+                      <tr>
+                        <th>Approximate concentration of <br> acetic acid solutions, C (N)</th>
+                        <th>Volume of standard NaOH <br> required for titration (mL)</th>
+                        <th>Actual concentration of <br> acetic acid solutions, C (N)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>9.1</td>
+                        <td>0.91</td>
+                      </tr>
+                      <tr>
+                        <td>0.5</td>
+                        <td>4.8</td>
+                        <td>0.48</td>
+                      </tr>
+                      <tr>
+                        <td>0.25</td>
+                        <td>2.4</td>
+                        <td>0.24</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+
+                <!--input type="range" id="mySlider" min="1" max="100" value="50"-->
+
+                <nav id="cellconst" onclick="cellconst()" ></nav>
                 <h1 id="hovt"></h1>
                 <button id="start" onclick="ok()" >START</button>
             </div>
@@ -67,10 +249,12 @@
         <div id="langselector">        
             <h1 id="lselector">Please select your language</h1>
             <button id="hindi" onclick="hindi1()">हिंदी</button>
-            <button id="eng" onclick="eng1()">ENGLISH</button>
+            <button id="eng" onclick="eng1()">ENG</button>
         </div>
     </main>
     <script src="script/project.js"></script>
     <script src="script/starting.js"></script>
+    <script src="script/newsteps.js"></script>
+    <script src="script/bypass.js"></script>
 </body>
 </html>

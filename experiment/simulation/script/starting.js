@@ -11,7 +11,7 @@ hconductometer.addEventListener("mouseenter",function(){
 hcellstand.addEventListener("mouseenter",function(){
     hovt.style.transitionDuration="0.5s"
     hovt.style.visibility="visible"
-    hovt.innerText="CONDUCTING-CELL STAND"
+    hovt.innerText="CONDUCTIVITY-CELL STAND"
     hovt.style.top="23%"
     hovt.style.left="30%"
     c.style.transitionDuration="0.3s"
@@ -22,7 +22,7 @@ hcellstand.addEventListener("mouseenter",function(){
 hcell.addEventListener("mouseenter",function(){
     hovt.style.transitionDuration="0.5s"
     hovt.style.visibility="visible"
-    hovt.innerText="CONDUCTING-CELL"
+    hovt.innerText="CONDUCTIVITY-CELL"
     hovt.style.top="27%"
     hovt.style.left="38%"
     cell.style.transitionDuration="0.3s"
