@@ -324,7 +324,7 @@ function pop1(){
     }
     else if(m==10){
         ptext.innerText="Message for Student"
-        hint.innerText="Now measuring conductivity of Acetic acid solution at different concentrations of \n 0.05(N), 0.025(N), 0.0125(N) \n Note down carefully"
+        hint.innerText="Now measuring conductivity of CH3COONa solution at different concentrations of \n 0.05(N), 0.025(N), 0.0125(N) \n Note down carefully"
         box.style.visibility="visible"
         m=11
     }
