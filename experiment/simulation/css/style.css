@@ -1,8 +1,16 @@
 
-@font-face {
+/*@font-face {
     font-family: digital;
     src:url('https://github.com/ketangautam05/measurement-of-electrical-conductance-to-determine-dissociation-constant-of-acetic-acid/experiment/simulation/fonts/digital-7.ttf') format('truetype');
+}*/
+
+@font-face {
+    font-family: 'Seven Segment';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Seven Segment'), url('Seven Segment.woff') format('woff');
 }
+
 
 @media only screen and (max-width: 480px) {
     /* Your styles for mobile devices go here */
@@ -321,7 +329,7 @@ body{
     color: red;
     transition: all;
     transition-duration: 1s;
-    font-family: digital;
+    font-family: Seven Segment;
     font-weight: 100;
     /*font-size: 2.4vh;*/
 }
