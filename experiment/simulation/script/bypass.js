@@ -1,4 +1,4 @@
-hindi1()
+/*hindi1()
 ok()
 poweron()
 cellconst()
