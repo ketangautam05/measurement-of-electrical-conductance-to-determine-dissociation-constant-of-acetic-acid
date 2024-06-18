@@ -1,5 +1,5 @@
 
-var hmessage=["उपकरणों पर माउस ले जा कर उनसे स्वयं को परिचित कराएं.....फिर प्रयोग शुरू करने के लिए स्टार्ट बटन पर क्लिक करें",
+var hmessage=["उपकरणों पर माउस ले जा कर उनसे स्वयं को परिचित कराएं.....फिर प्रयोग शुरू करने के लिए आगे बटन पर क्लिक करें",
 "मुख्य स्विच चालू करें",
 "कंडक्टोमीटर पर पावर बटन दबाएं",
 "फ़ंक्शन नॉब घुमाएँ और सेल-कॉन्स्ट मोड पर सेट करें",
@@ -13,7 +13,7 @@ var hmessage=["उपकरणों पर माउस ले जा कर �
 "सटीक माप के लिए संतुलन स्थापित करने के लिए चालकता सेल को कुछ समय के लिए घोल में डुबोकर छोड़ दें",
 "कंडक्टोमीटर की स्क्रीन पर दिखाई गई प्रत्येक रीडिंग को नोट करें",
 "सोडियम एसीटेट घोल के लिए रीडिंग लिखें",
-"सभी रेटिंग, मान और गणना देखने के लिए अगला बटन दबाएँ"]
+"सभी रेटिंग, मान और गणना देखने के लिए observations बटन दबाएँ"]
 
 var message=["Make yourself familiar with the insturments by hovering over them, then click on start button to start the experiment",
 "Turn on the main switch",
@@ -29,7 +29,7 @@ var message=["Make yourself familiar with the insturments by hovering over them,
 "leave conductivity cell dipped in solution for some time to establish equilibirium for accurate measurement",
 "Note down every reading shown on conductometer's screen",
 "Write down readings for Sodium acetate solution",
-"press next button to see all measurements, values and calculations"]
+"press observations button to see all radings, values and calculations"]
 
 
 
@@ -77,7 +77,6 @@ var ph = document.querySelector("#ph")
 var hlight = document.querySelector("#hlight")
 
 
-/*var t=h*/
 var clickcount=10
 var placed="yes"
 var beaker="none"
@@ -97,13 +96,7 @@ var mes1
 var lang = "none"
 var phc=0
 
-/*setTimeout(function(){
-    speech1()
-},1000)*/
 
-
-
-/*starting styling*/
 c.style.top="25%"
 c.style.left="18%"
 c.style.height="35%"
@@ -175,7 +168,7 @@ function hindi1(){
     lang="hindi"
     headertext.innerText="'एसिटिक' एसिड के पृथक्करण स्थिरांक को निर्धारित करने के लिए विद्युत चालकता का मापन"
     langselector.style.opacity="0%"
-    //s.innerText="आगे"
+    s.innerText="आगे"
     ins.innerText="निर्देश :-"
 
     setTimeout(function(){
@@ -204,7 +197,6 @@ function eng1(){
 function speech1(){
     speechSynthesis.cancel();
     if(lang=="none"){
-        /*mes1="Please select your language"*/
     }
     else if(lang=="hindi"){
         mes1=hmessage[messcounter-1]
@@ -213,7 +205,6 @@ function speech1(){
         mes1=message[messcounter-1]
     }
     setTimeout(function(){ 
-        //mes1=hmessage[messcounter]
         
         const utterance = new SpeechSynthesisUtterance(mes1);
         if(lang=="hindi"){
@@ -237,7 +228,6 @@ function update(){
     else if(lang=="eng"){
         mes.innerText=message[messcounter]
     }
-    //mes.innerText=hmessage[messcounter]
     messcounter+=1
         speech1()
 }
@@ -272,43 +262,59 @@ function ok(){
         change.style.visibility="hidden"
         powerbutton.style.visibility="hidden"
         on.style.visibility="hidden"
+        a62.style.visibility="hidden"
+        a62b.style.visibility="hidden"
+        a31.style.visibility="hidden"
+        a31b.style.visibility="hidden"
+        a16.style.visibility="hidden"
+        a16b.style.visibility="hidden"
 
         tbl1.style.visibility="visible"
         tbl2.style.visibility="visible"
-        tbl3.style.visibility="visible"
+        
         tblh1.style.visibility="visible"
         tblh2.style.visibility="visible"
-        tblh3.style.visibility="visible"
+        
         simulation="sabkhatam"
-        setTimeout(function(){
-            imageshow="none"
-        },2000)
+        
 
         
         },100)
-       /* setTimeout(function(){
-            s.style.visibility="hidden"
-        },1000)*/
         
+    }
+    else if(simulation=="sabkhatam"){
+        tbl1.style.visibility="hidden"
+        tbl2.style.visibility="hidden"
+        tblh1.style.visibility="hidden"
+        tblh2.style.visibility="hidden"
+        tbl3.style.visibility="visible"
+        tblh3.style.visibility="visible"
+        tbl4.style.visibility="visible"
+        tblh4.style.visibility="visible"
+        simulation="ended"
+        setTimeout(function(){
+            imageshow="none"
+        },2000)
     }
 
     else if(imageshow=="none"){
         dataimage.style.visibility="visible"
         imageheading.style.visibility="visible"
         formula.style.visibility="visible"
-        tbl4.style.visibility="visible"
-        tblh4.style.visibility="visible"
-
-        tbl1.style.visibility="hidden"
-        tbl2.style.visibility="hidden"
         tbl3.style.visibility="hidden"
-        tblh1.style.visibility="hidden"
-        tblh2.style.visibility="hidden"
         tblh3.style.visibility="hidden"
-
+        tbl4.style.visibility="hidden"
+        tblh4.style.visibility="hidden"
+        imageshow="yes"
     }
-
-    else{
+    else if(imageshow=="yes"){
+        dataimage.style.visibility="hidden"
+        imageheading.style.visibility="hidden"
+        formula.style.visibility="hidden"
+        tbl5.style.visibility="visible"
+        tblh5.style.visibility="visible"
+    }
+    else if(simulation=="none"){
         c.style.transitionDuration="1.0s"
         cell.style.transitionDuration="1.0s"
         b1f.style.transitionDuration="1.0s"
@@ -339,12 +345,11 @@ function ok(){
         s.style.animationIterationCount="0"
         ph.style.visibility="visible"
         ph.style.transform="translate(-230%,-500%)"
-        /*power1.style.visibility="visible"*/
+        simulation="start"
         setTimeout(function(){
             nob1.style.visibility="visible" 
             nob2.style.visibility="visible" 
             nob3.style.visibility="visible" 
-            /*on.style.visibility="visible"*/
             off.style.visibility="visible" 
             s.style.visibility="hidden"
             na5.style.visibility="visible"
@@ -450,27 +455,23 @@ function nobn1(){
 
 function nobn2(){
     if(cc=="calibrate"){
-    /*clickcount=0*/
     nob2.style.transform="translate(10%,0%) rotate(20deg)"
     change.innerText="0.335"
     cc="step1"
     ph.style.visibility="hidden"
     }
     else if(cc=="step1"){
-        /*clickcount=0*/
         nob2.style.transform="translate(15%,0%) rotate(30deg)"
         change.innerText="0.743"
         cc="step2"
     }
     else if(cc=="step2"){
-        /*clickcount=0*/
         nob2.style.transform="translate(25%,0%) rotate(90deg)"
         change.innerText="1.215"
         cc="step3"
         update()
     }
     else if(cc=="step3"){
-        /*clickcount=0*/
         nob2.style.transform="translate(25%,0%) rotate(70deg)"
         change.innerText="1.000"
         cc="done"
@@ -480,9 +481,6 @@ function nobn2(){
         ph.style.transform="translate(-750%,-400%)"
         update()
     }
-    /*else{
-        change.innerText="0.000"
-    }*/
 }
 
 ///////////////////////////////////////////////////////////////////// nob3 function   //////////////////////////////////////////////////////////////////////////////
@@ -519,115 +517,162 @@ function nobn3(){
 function cellclick(){
     if(clickcount==0){
         cell.style.transform="translate(0%,35%)"
-        /*clickcount+=1*/
+        ph.style.transform="translate(-750%,-400%) rotate(0deg)"
+        clickcount=10
+        checking="50"
+        /**************************************************** beaker distilled water *********************************/
         if(beaker=="cleaning-sol"){
             statuses="cleaned"
-            /*console.log(statuses)*/
-            clickcount+=1
+            clickcount=1
         }
-        else if(beaker=="standard"/* && cc=="unknown"*/){
-            /*statuses="checked"*/
-            //cc="check"
-            clickcount=10
-            ph.style.transform="translate(-750%,-400%)"
-            if(clickcount==10){
-                if(type=="na5"){
-                    change.innerText="05.93"
-                    setTimeout(function(){
-                        change.innerText="05.95"
-                        clickcount=1
-                    },2000)
-                    messcounter=8
-                    update()
-                    
-                }
-                else if(type=="na25"){
-                    change.innerText="02.76"
-                    setTimeout(function(){
-                        change.innerText="02.77"
-                        clickcount=1
-                    },2000)
-                }
-                else if(type=="na125"){
-                    change.innerText="01.45"
-                    setTimeout(function(){
-                        change.innerText="01.47"
-                        clickcount=1
-                    },2000)
-                }
-                else if(type=="h5"){
-                    change.innerText="013.4"
-                    setTimeout(function(){
-                        change.innerText="013.7"
-                        clickcount=1
-                    },2000)
-                    messcounter=11
-                    update()
-                    
-                }
-                else if(type=="h25"){
-                    change.innerText="07.64"
-                    setTimeout(function(){
-                        change.innerText="07.65"
-                        clickcount=1
-                    },2000)
-                }
-                else if(type=="h125"){
-                    change.innerText="04.13"
-                    setTimeout(function(){
-                        change.innerText="04.15"
-                        clickcount=1
-                    },2000)
-                }
-                
-
-            }
-           
-           
-            /*console.log(statuses)*/
-        }
-        else if(beaker=="unknown"){
-            statuses="value-found"
-            /*console.log(statuses)*/
-            //clickcount+=1
-            /*if(cc=="done"){
-            change.innerText="7.896"
-            rc+=1*/
-
-            if(type=="a5"){
-                change.innerText="02.24"
+        /**************************************** beaker standard ************************************************/
+        else if(beaker=="standard"){
+            setTimeout(function(){
+                clickcount=1
+            },1500)
+            if(type=="na5"){
+                change.innerText="05.93"
+                testing="read1"
                 setTimeout(function(){
-                    change.innerText="02.26"
-                    clickcount=1
-                },2000)
+                    change.innerText="05.95"
+                },1500)
+                messcounter=8
+                update()
+            }
+            else if(type=="na25"){
+                change.innerText="02.76"
+                testing="read2"
+                setTimeout(function(){
+                    change.innerText="02.77"
+                },1500)
+            }
+            else if(type=="na125"){
+                change.innerText="01.45"
+                testing="read3"
+                setTimeout(function(){
+                    change.innerText="01.47"
+                },1500)
+            }else if(type=="na62"){
+                change.innerText="00.76"
+                testing="read21"
+                setTimeout(function(){
+                    change.innerText="00.77"
+                },1500)
+            }
+            else if(type=="na31"){
+                change.innerText="00.40"
+                testing="read22"
+                setTimeout(function(){
+                    change.innerText="00.41"
+                },1500)
+            }
+            else if(type=="na16"){
+                change.innerText="00.21"
+                testing="read23"
+                setTimeout(function(){
+                    change.innerText="00.23"
+                },1500)
+            }
+            else if(type=="h5"){
+                chance="khatam"
+                change.innerText="013.4"
+                testing="read4"
+                setTimeout(function(){
+                    change.innerText="013.7"
+                },1500)
                 messcounter=11
                 update()
                 
             }
+            else if(type=="h25"){
+                change.innerText="07.64"
+                testing="read5"
+                setTimeout(function(){
+                    change.innerText="07.65"
+                },1500)
+            }
+            else if(type=="h125"){
+                change.innerText="04.13"
+                testing="read6"
+                setTimeout(function(){
+                    change.innerText="04.15"
+                },1500)
+            }
+            else if(type=="h62"){
+                change.innerText="02.12"
+                testing="read25"
+                setTimeout(function(){
+                    change.innerText="02.14"
+                },1500)
+            }
+            else if(type=="h31"){
+                change.innerText="01.11"
+                testing="read26"
+                setTimeout(function(){
+                    change.innerText="01.12"
+                },1500)
+            }
+            else if(type=="h16"){
+                change.innerText="00.59"
+                testing="read27"
+                setTimeout(function(){
+                    change.innerText="00.60"
+                },1500)
+            }
+        }
+        /***************************************** beaker unknown ****************************/
+        else if(beaker=="unknown"){
+            setTimeout(function(){
+                clickcount=1
+            },1500)
+            statuses="value-found"
+            if(type=="a5"){
+                chance="khatam"
+                change.innerText="02.24"
+                testing="read8"
+                setTimeout(function(){
+                    change.innerText="02.26"
+                },1500)
+                messcounter=11
+                update()
+            }
             else if(type=="a25"){
                 change.innerText="01.45"
+                testing="read9"
                 setTimeout(function(){
                     change.innerText="01.46"
-                    clickcount=1
-                },2000)
+                },1500)
             }
             else if(type=="a125"){
                 change.innerText="00.91"
+                testing="read10"
                 setTimeout(function(){
                     change.innerText="00.92"
-                    clickcount=1
-                    checking="khatam"
-                },2000)
+                },1500)
             }
-                ph.style.transform="translate(-670%,-800%) rotate(-90deg)"
-            
+            else if(type=="a62"){
+                change.innerText="00.53"
+                testing="read31"
+                setTimeout(function(){
+                    change.innerText="00.54"
+                },1500)
+            }
+            else if(type=="a31"){
+                change.innerText="00.30"
+                testing="read32"
+                setTimeout(function(){
+                    change.innerText="00.31"
+                },1500)
+            }
+            else if(type=="a16"){
+                change.innerText="00.15"
+                testing="read33"
+                setTimeout(function(){
+                    change.innerText="00.17"
+                    checking="khatam"
+                },1500)
+            }
         }
-        /*else if(cc=="done" && beaker=="standard"){
-            change.innerText="1.000"
-            ph.style.transform="translate(-750%,-400%)"
-            clickcount+=1
-        }*/
-
     }
     else if(clickcount==1){
         cellclickreverse()
@@ -639,60 +684,27 @@ function cellclick(){
 function cellclickreverse(){
     cell.style.transform="translate(0%,0%)"
     clickcount-=1
-    if(/*cc=="done" && */beaker=="unknown"){
+    ph.style.transform="translate(-670%,-800%) rotate(-90deg)"
+    if(beaker=="unknown"){
         change.innerText="0.000"
         if(type=="a5"){
-            testing="read8"
-            checking="50"
-            chance="khatam"
             messcounter=12
             update()
         }
-        else if(type=="a25"){
-            testing="read9"
-            checking="50"
-        }
-        else if(type=="a125"){
-            testing="read10"
-            checking="50"
-        }
-
     }
-    else if(/*cc=="done" && */beaker=="standard"){
+    else if(beaker=="standard"){
         change.innerText="0.000"
-        ph.style.transform="translate(-670%,-800%) rotate(-90deg)"
         if(type=="na5"){
-            testing="read1"
             messcounter=9
             update()
         }
-        else if(type=="na25"){
-            testing="read2"
-            checking="50"
-        }
-        else if(type=="na125"){
-            testing="read3"
-            checking="50"
-        }
         else if(type=="h5"){
-            testing="read4"
-            checking="50"
-            chance="khatam"
             messcounter=12
             update()
         }
-        else if(type=="h25"){
-            testing="read5"
-            checking="50"
-        }
-        else if(type=="h125"){
-            testing="read6"
-            checking="50"
-        }
     }
     else if(statuses=="cleaned"){
-        ph.style.transform="translate(-670%,-800%) rotate(-90deg)"
-        if(testing=="read3"){
+        if(testing=="read23"){
             chance="second"
         }
         else if(testing=="read7"){
@@ -702,25 +714,18 @@ function cellclickreverse(){
             m=1
         }
     }
-    /*else if(statuses=="checked" && cc=="done"){
-        ph.style.transform="translate(-670%,-800%) rotate(-90deg)"
-    }*/
 }
 
 ///////////////////////////////////////////////////////////////////   DISTILLED WATER BEAKER   ///////////////////////////////////////////////////////////////////////
 
 function beaker1(){
-    console.log(placed)
     if(placed=="no" || m==8 || m==13){
         b1f.style.transform="translate(-375%,15%)"
         b1b.style.transform="translate(-375%,15%)"
         beaker="cleaning-sol"
         clickcount=0
         placed="yes"
-        //ph.style.visibility="hidden"
         ph.style.transform="translate(-750%,-400%)"
-        console.log(testing)
-
         if(m==8){
             m=9
         }
@@ -736,10 +741,7 @@ function beaker1(){
         clickcount=10
         cleaning="complete"
         ph.style.transform="translate(-1200%,-650%) rotate(0deg)"
-        console.log(m)
         pop1()
-        console.log(testing)
-        console.log()
             if(m==9){
                 messcounter=10
                 update()
@@ -754,69 +756,4 @@ function beaker1(){
 
 }
 
-/*function beaker2(){
-    if(cleaning=="complete"){
-        b2f.style.transform="translate(-540%,15%)"
-        b2b.style.transform="translate(-540%,15%)"
-        beaker="standard"
-        clickcount=0
-        cleaning="none"
-        ph.style.transform="translate(-750%,-400%) rotate(0deg)"
-        
-    }
-
-    else if(statuses=="checked" && clickcount==0){
-        b2f.style.transform="translate(0%,0%)"
-        b2b.style.transform="translate(0%,0%)"
-        clickcount=10
-        checking="complete"
-        ph.style.transform="translate(-1340%,-650%)"
-        update()
-    }
-}
-
-function beaker3(){
-    if(checking=="complete"){
-        b3f.style.transform="translate(-700%,15%)"
-        b3b.style.transform="translate(-700%,15%)"
-        beaker="unknown"
-        clickcount=0
-        checking="none"
-        ph.style.transform="translate(-750%,-400%) rotate(0deg)"
-        update()
-
-    }
-    else if(statuses=="value-found" && clickcount==0){
-        b3f.style.transform="translate(0%,0%)"
-        b3b.style.transform="translate(0%,0%)"
-        clickcount=10
-        simulation="complete"
-        s.style.animation="vibrate 1s"
-        s.style.animationIterationCount="infinite"
-        s.style.visibility="visible"
-        s.innerText="Next"
-        ph.style.visibility="hidden"
-        update()
-
-        setTimeout(function(){
-            cell.style.transitionDuration="0s"
-            /*s.style.transitionDuration="0s"*/
-         /*   i.style.transitionDuration="0s"
-            c.style.transitionDuration="0s"
-            cell.style.transitionDuration="0s"
-            clip.style.transitionDuration="0s"
-            nob1.style.transitionDuration="0s"
-            nob2.style.transitionDuration="0s"
-            nob3.style.transitionDuration="0s"
-            b1f.style.transitionDuration="0s"
-            b2f.style.transitionDuration="0s"
-            b3f.style.transitionDuration="0s"
-            b1b.style.transitionDuration="0s"
-            b2b.style.transitionDuration="0s"
-            b3b.style.transitionDuration="0s"
-            change.style.transitionDuration="0s"
-        })
-    }
-}
-)*/
 
