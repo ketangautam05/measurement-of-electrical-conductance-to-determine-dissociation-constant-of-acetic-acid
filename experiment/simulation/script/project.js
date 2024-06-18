@@ -29,7 +29,7 @@ var message=["Make yourself familiar with the insturments by hovering over them,
 "leave conductivity cell dipped in solution for some time to establish equilibirium for accurate measurement",
 "Note down every reading shown on conductometer's screen",
 "Write down readings for Sodium acetate solution",
-"press observations button to see all radings, values and calculations"]
+"press observations button to see all readings, values and calculations"]
 
 
 
