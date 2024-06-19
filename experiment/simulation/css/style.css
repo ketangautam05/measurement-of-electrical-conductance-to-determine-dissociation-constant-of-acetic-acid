@@ -502,13 +502,12 @@ body{
 #ffb1{
     position: absolute;
     width: 5%;
-    height: 12%;
-    top: 63.1%;
+    height: 20%;
+    top: 68%;
     left: 73%;
     transition: all;
     transition-duration: 1s;
     visibility: visible;
-    visibility: hidden;
 }
 
 #bb1{
@@ -519,32 +518,29 @@ body{
     left: 73%;
     transition: all;
     transition-duration: 1s;
-    visibility: visible;
     visibility: hidden;
 }
 
 #ffb2{
     position:absolute;
     width: 5%;
-    height: 12%;
-    top: 63.1%;
+    height: 20%;
+    top: 68%;
     left: 81%;
     transition: all;
     transition-duration: 1s;
     visibility: visible;
-    visibility: hidden;
 }
 
 #bb2{
     position: absolute;
     width: 5%;
-    height: 12.5%;
-    top: 62.5%;
+    height: 20%;
+    top: 68%;
     left: 81%;
     transition: all;
     transition-duration: 1s;
     visibility: visible;
-    visibility: hidden;
 }
 
 #na5{
@@ -1065,25 +1061,34 @@ body{
     width: 5%;
     /*background-color: blue;*/
     top: 44%;
-    left: 60%;
+    left: 57.5%;
 }
 
 #hss{
     position: absolute;
-    height: 13%;
+    height: 18%;
     width: 5%;
     /*background-color: blue;*/
-    top: 44%;
-    left: 68%;
+    top: 39%;
+    left: 65.5%;
 }
 
 #has{
     position: absolute;
-    height: 13%;
+    height: 18%;
     width: 5%;
-    /* background-color: blue; */
-    top: 44%;
-    left: 76%;
+    /*background-color: blue; */
+    top: 39%;
+    left: 72%;
+}
+
+#hsa{
+    position: absolute;
+    height: 18%;
+    width: 5%;
+    /*background-color: blue; */
+    top: 39%;
+    left: 78.5%;
 }
 
 #ph{

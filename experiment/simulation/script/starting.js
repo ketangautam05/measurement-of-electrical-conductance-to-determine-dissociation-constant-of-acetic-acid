@@ -33,8 +33,8 @@ hcell.addEventListener("mouseenter",function(){
 hcs.addEventListener("mouseenter",function(){
     hovt.style.transitionDuration="0.5s"
     hovt.style.visibility="visible"
-    hovt.innerText="CLEANING SOLUTION"
-    hovt.style.top="41%"
+    hovt.innerText="Distilled Water"
+    hovt.style.top="38%"
     hovt.style.left="55%"
     b1f.style.transitionDuration="0.3s"
     b1f.style.scale="1.1"
@@ -46,9 +46,9 @@ hcs.addEventListener("mouseenter",function(){
 hss.addEventListener("mouseenter",function(){
     hovt.style.transitionDuration="0.5s"
     hovt.style.visibility="visible"
-    hovt.innerText="STANDARD SOLUTION"
-    hovt.style.top="41%"
-    hovt.style.left="63%"
+    hovt.innerText="NaCl"
+    hovt.style.top="32%"
+    hovt.style.left="65.5%"
     b2f.style.transitionDuration="0.3s"
     b2f.style.scale="1.1"
     b2b.style.transitionDuration="0.3s"
@@ -59,11 +59,19 @@ hss.addEventListener("mouseenter",function(){
 has.addEventListener("mouseenter",function(){
     hovt.style.transitionDuration="0.5s"
     hovt.style.visibility="visible"
-    hovt.innerText="ACETIC-ACID SOLUTION"
-    hovt.style.top="41%"
-    hovt.style.left="71%"
+    hovt.innerText="HCL"
+    hovt.style.top="32%"
+    hovt.style.left="72%"
     b3f.style.transitionDuration="0.3s"
     b3f.style.scale="1.1"
+})
+
+hsa.addEventListener("mouseenter",function(){
+    hovt.style.transitionDuration="0.5s"
+    hovt.style.visibility="visible"
+    hovt.innerText="Sodium Acetate"
+    hovt.style.top="32%"
+    hovt.style.left="76%"
     b3b.style.transitionDuration="0.3s"
     b3b.style.scale="1.1"
 })
@@ -110,6 +118,15 @@ has.addEventListener("mouseout",function(){
     hovt.style.visibility="hidden"
     //b3f.style.transitionDuration="0.3s"
     b3f.style.scale="1.0"
+    //b3b.style.transitionDuration="0.3s"
+    b3b.style.scale="1.0"
+})
+
+hsa.addEventListener("mouseout",function(){
+    hovt.style.transitionDuration="0s"
+    hovt.style.visibility="hidden"
+    //b3f.style.transitionDuration="0.3s"
+    //b3f.style.scale="1.0"
     //b3b.style.transitionDuration="0.3s"
     b3b.style.scale="1.0"
 })
