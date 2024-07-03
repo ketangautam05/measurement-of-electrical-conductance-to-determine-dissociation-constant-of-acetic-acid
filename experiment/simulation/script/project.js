@@ -206,12 +206,18 @@ function speech1(){
         mes1=message[messcounter-1]
     }
     setTimeout(function(){ 
-        
         const utterance = new SpeechSynthesisUtterance(mes1);
+        const voices = speechSynthesis.getVoices()
+        const voice1 = voices.find(voice => voice.name === 'Microsoft Kalpana - Hindi (India)')
+        const voice = voices.find(voice => voice.name === 'Microsoft Zira - English (United States)')        
+        //const utterance = new SpeechSynthesisUtterance(mes1);
         if(lang=="hindi"){
+            utterance.voice=voice1
             utterance.lang='hi-IN';
         }
         else if(lang=="eng"){
+
+            utterance.voice=voice
             utterance.lang='en-IN';
         }
         utterance.pitch=1;
